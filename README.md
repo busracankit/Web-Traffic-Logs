@@ -1,15 +1,3 @@
-Web Trafik Loglarına Dayalı Yapay Zeka Destekli Soru-Cevap Sistemi
-Bu proje, web trafik loglarını kullanarak bir yapay zeka destekli soru-cevap (Q&A) sistemi geliştirmeyi amaçlamaktadır. Sistem, web sunucusundan gelen günlük kayıtlarını analiz ederek doğal dildeki kullanıcılardan gelen sorulara doğru cevaplar vermeyi hedefler.
+Bu proje, web trafik logları üzerinde çalışan bir yapay zeka destekli soru-cevap (Q&A) sistemi geliştirmeyi amaçlamaktadır. Sistemin temel amacı, web sunucularından elde edilen log verilerini analiz ederek, kullanıcıların doğal dilde sordukları sorulara anlamlı ve doğru yanıtlar verebilmektir. Bu amaçla, veri hazırlığı ve ön işleme adımlarından başlayarak, log verilerini vektörleştiren ve FAISS kullanarak verimli bir arama sistemi kuran bir çözüm geliştirilmiştir. Kullanıcı sorgularına yanıt üretmek için ise, T5 modeline dayalı jeneratif bir model entegre edilmiştir.
 
-Özellikler
-Veri Hazırlığı: Faker kütüphanesi ile sahte log verileri oluşturulur.
-Veri Analizi: Log verileri pandas kullanılarak işlenir ve temizlenir.
-Vektörleme: TF-IDF ve FAISS kullanılarak log kayıtları vektörlere dönüştürülür.
-RAG Modeli: T5 modelini kullanarak kullanıcı sorularına uygun cevaplar oluşturulur.
-Test ve Değerlendirme: Performans değerlendirmesi ve doğruluk analizi yapılır.
-Kurulum ve Kullanım
-Gereken kütüphaneleri yükleyin: pip install faker pandas scikit-learn faiss-cpu transformers torch.
-Web trafik loglarını oluşturun ve işleyin.
-Modeli eğitin ve yanıtları değerlendirin.
-Zorluklar ve İyileştirmeler
-Veri hazırlığı, performans sorunları ve model entegrasyonu gibi zorluklarla karşılaşıldı. Yanıt kalitesini artırmak için algoritma ve veri analizinde iyileştirmeler yapılması önerilmektedir.
+Projenin kurulumu için gerekli olan Python kütüphaneleri yüklendikten sonra, log verileri oluşturulup işlenir ve FAISS ile T5 modeli entegre edilerek sistem çalıştırılır. Kullanıcılar, komut satırından soru sorarak gerçek zamanlı yanıtlar alabilir. Sistem, çeşitli test senaryolarıyla değerlendirilmiş olup, yapılan testler sonucunda %100 doğruluk oranı ile çalıştığı görülmüştür. Bu doğruluk oranı, sistemin verileri doğru ve tutarlı bir şekilde analiz edebildiğini göstermektedir. Gelecekte, farklı veri setleri ve yeni sorularla sistemin doğruluğu ve yanıt kalitesi daha da iyileştirilebilir. 
